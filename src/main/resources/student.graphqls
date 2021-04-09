@@ -1,0 +1,15 @@
+type Student {
+    id: ID!
+    name: String!
+    email: String
+}
+
+type Query {
+    findAllStudents: [Student]
+    findStudentByEmail(email: String): Student
+}
+
+type Mutation {
+    saveStudent(name: String!, email: String) : Student!
+}
+
